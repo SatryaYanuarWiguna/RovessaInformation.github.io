@@ -31,11 +31,10 @@ body {
     max-width: 750px;
     width: 100%;
     margin: auto;
-    text-align: center;
 }
 
 /* =========================
-   PROFIL CUSTOM
+   PROFIL PERUSAHAAN
 ========================= */
 
 .profile {
@@ -45,9 +44,8 @@ body {
     border-radius: 22px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     margin-bottom: 25px;
+    text-align: center;
 }
-
-/* FOTO PROFIL LINGKARAN */
 
 .profile-photo {
     width: 140px;
@@ -64,8 +62,6 @@ body {
     height: 100%;
     object-fit: cover;
 }
-
-/* IDENTITAS PROFIL */
 
 .profile h1 {
     font-size: 25px;
@@ -84,8 +80,6 @@ body {
     color: #e0f2fe;
 }
 
-/* GARIS PEMBATAS */
-
 .line {
     width: 65px;
     height: 3px;
@@ -94,11 +88,13 @@ body {
     border-radius: 10px;
 }
 
-/* INFORMASI PERUSAHAAN */
+/* =========================
+   INFORMASI PERUSAHAAN
+========================= */
 
 .info {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     margin-top: 25px;
 }
@@ -129,6 +125,8 @@ body {
     border-radius: 22px;
     padding: 30px 22px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    margin-bottom: 25px;
 }
 
 .history h2 {
@@ -140,15 +138,88 @@ body {
 .history p {
     font-size: 15px;
     line-height: 1.9;
-    text-align: center;
     margin-bottom: 20px;
 }
-
-/* TEKS HIGHLIGHT */
 
 .highlight {
     color: #7dd3fc;
     font-weight: bold;
+}
+
+/* =========================
+   MENU PILIHAN
+========================= */
+
+.menu-section {
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 22px;
+    padding: 30px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.menu-title {
+    font-size: 23px;
+    color: #7dd3fc;
+    margin-bottom: 8px;
+}
+
+.menu-description {
+    color: #bae6fd;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+/* SUSUNAN TOMBOL */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+}
+
+/* TOMBOL MENU */
+
+.menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 105px;
+    padding: 15px 8px;
+
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 17px;
+
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+/* IKON MENU */
+
+.menu-icon {
+    font-size: 27px;
+}
+
+/* EFEK KLIK */
+
+.menu-button:hover {
+    background: #2563eb;
+    border-color: #7dd3fc;
+    transform: translateY(-4px);
+    box-shadow: 0 7px 20px rgba(0,0,0,0.2);
+}
+
+.menu-button:active {
+    transform: scale(0.96);
 }
 
 /* =========================
@@ -162,6 +233,7 @@ body {
     font-size: 13px;
     line-height: 1.8;
     color: #bae6fd;
+    text-align: center;
 }
 
 /* =========================
@@ -176,6 +248,15 @@ body {
 
     .history p {
         font-size: 14px;
+    }
+
+    .menu-button {
+        font-size: 12px;
+        min-height: 95px;
+    }
+
+    .menu-icon {
+        font-size: 24px;
     }
 
 }
@@ -193,13 +274,11 @@ body {
 
     <section class="profile">
 
-        <!-- FOTO PROFIL -->
         <div class="profile-photo">
-            <img src="IMG_20261107_195422.jpg" alt="Logo Rovessa">
+            <img src="Foto PO.jpg" alt="Logo Rovessa">
         </div>
 
-        <!-- IDENTITAS -->
-        <h1>PO. ROVESSA TRIJAYA</h1>
+        <h1>PO. ROVESSA TRIJAYA COMPANY</h1>
 
         <div class="username">
             @rovessatrijaya
@@ -213,7 +292,6 @@ body {
 
         <div class="line"></div>
 
-        <!-- INFORMASI PERUSAHAAN -->
         <div class="info">
 
             <div class="info-item">
@@ -262,7 +340,7 @@ body {
 
         <p>
             Seiring berjalannya waktu, perusahaan ini menggunakan nama
-            <span class="highlight">PT. Rovessa Transport Corporation (RTC)</span>.
+            <span class="highlight">PO. Rovessa Transport Corporation (RTC)</span>.
             Kemudian, nama tersebut kembali mengalami perubahan menjadi
             <span class="highlight">Rovessa Trijaya Company</span>,
             dengan mengganti kata Transport Corporation menjadi Trijaya Company.
@@ -275,7 +353,6 @@ body {
             sebagai identitas utama perusahaan.
         </p>
 
-        <!-- PENUTUP -->
         <div class="footer">
 
             Sekian sejarah singkat dari PO. Rovessa Trijaya Company.
@@ -295,12 +372,68 @@ body {
         </div>
 
     </section>
-    
-      <h3>MENU</h3>
-<br>Peraturan klik: <a href="Peraturan PO.html">disini</a>
-<br>Informasi Penting klik: <a href="Informasi Penting.html">disini</a>
-<br>Customer Service Klik: <a href="Customer Service.html">disini</a>
-<br>Saluran Dan Media Sosial PO: <a href="Saluran Dan Media Sosial PO.html">disini</a>
+
+
+    <!-- =====================
+         MENU PILIHAN
+    ====================== -->
+
+    <section class="menu-section">
+
+        <h2 class="menu-title">MENU UTAMA</h2>
+
+        <p class="menu-description">
+            Jelajahi informasi dan layanan PO Rovessa
+        </p>
+
+        <div class="menu-grid">
+
+            <a href="Asset PO.html" class="menu-button">
+                <span class="menu-icon">🚌</span>
+                Asset PO
+            </a>
+
+            <a href="Customer Service.html" class="menu-button">
+                <span class="menu-icon">💬</span>
+                Customer Service
+            </a>
+
+            <a href="Galeri PO.html" class="menu-button">
+                <span class="menu-icon">🖼️</span>
+                Galeri PO
+            </a>
+
+            <a href="Informasi Penting.html" class="menu-button">
+                <span class="menu-icon">📢</span>
+                Informasi Penting
+            </a>
+
+            <a href="Peraturan PO.html" class="menu-button">
+                <span class="menu-icon">📋</span>
+                Peraturan PO
+            </a>
+
+            <a href="Saluran Dan Media Sosial PO.html" class="menu-button">
+                <span class="menu-icon">🌐</span>
+                Saluran & Media Sosial PO
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================
+         FOOTER AKHIR
+    ====================== -->
+
+    <div class="footer">
+        <b>PO. ROVESSA TRIJAYA</b>
+        <br>
+        Rovessa Trijaya Company (RTC)
+        <br>
+        © 2026 All Rights Reserved.
+    </div>
 
 </div>
 

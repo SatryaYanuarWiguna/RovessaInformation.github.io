@@ -1,14 +1,241 @@
-<!DOCTYPE html>
-<html>
 
+<!DOCTYPE html>
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Galeri PO Rovessa</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f4fa;
+    color: #202b40;
+    padding: 20px 12px;
+}
+
+.container {
+    max-width: 850px;
+    margin: 20px auto;
+    background: white;
+    padding: 25px 15px;
+    border-radius: 25px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    color: #2860e8;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #8490a3;
+    font-size: 14px;
+}
+
+/* GALERI 2 KOLOM */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+}
+
+.photo {
+    overflow: hidden;
+    border-radius: 14px;
+    background: #eef1f7;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.photo img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.photo img:active {
+    transform: scale(0.96);
+}
+
+.caption {
+    padding: 10px 5px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* FOTO MEMBESAR */
+
+.viewer {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0,0,0,0.95);
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.viewer img {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 22px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+/* TOMBOL KEMBALI */
+
+.back {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    padding: 13px 25px;
+    background: #eef2fa;
+    color: #2860e8;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.back:hover {
+    background: #2860e8;
+    color: white;
+}
+</style>
 </head>
 
 <body>
-  
-</body>
 
+<div class="container">
+
+    <div class="header">
+        <h1>GALERI PO ROVESSA</h1>
+        <p>Kumpulan Dokumentasi dan Foto Armada</p>
+    </div>
+
+    <div class="gallery">
+
+        <div class="photo">
+            <img src="foto1.jpg" onclick="showPhoto(this)">
+            <div class="caption">Dokumentasi 01</div>
+        </div>
+
+        <div class="photo">
+            <img src="foto2.jpg" onclick="showPhoto(this)">
+            <div class="caption">Dokumentasi 02</div>
+        </div>
+
+        <div class="photo">
+            <img src="foto3.jpg" onclick="showPhoto(this)">
+            <div class="caption">Dokumentasi 03</div>
+        </div>
+
+        <div class="photo">
+            <img src="foto4.jpg" onclick="showPhoto(this)">
+            <div class="caption">Dokumentasi 04</div>
+        </div>
+
+        <div class="photo">
+            <img src="foto5.jpg" onclick="showPhoto(this)">
+            <div class="caption">Dokumentasi 05</div>
+        </div>
+
+        <div class="photo">
+            <img src="foto6.jpg" onclick="showPhoto(this)">
+            <div class="caption">Dokumentasi 06</div>
+        </div>
+
+        <div class="photo">
+            <img src="foto7.jpg" onclick="showPhoto(this)">
+            <div class="caption">Dokumentasi 07</div>
+        </div>
+
+        <div class="photo">
+            <img src="foto8.jpg" onclick="showPhoto(this)">
+            <div class="caption">Dokumentasi 08</div>
+        </div>
+
+        <div class="photo">
+            <img src="foto9.jpg" onclick="showPhoto(this)">
+            <div class="caption">Dokumentasi 09</div>
+        </div>
+
+        <div class="photo">
+            <img src="foto10.jpg" onclick="showPhoto(this)">
+            <div class="caption">Dokumentasi 10</div>
+        </div>
+
+        <div class="photo">
+            <img src="foto11.jpg" onclick="showPhoto(this)">
+            <div class="caption">Dokumentasi 11</div>
+        </div>
+
+        <div class="photo">
+            <img src="foto12.jpg" onclick="showPhoto(this)">
+            <div class="caption">Dokumentasi 12</div>
+        </div>
+
+    </div>
+
+    <a href="index.html" class="back">
+        ← Kembali ke Menu Utama
+    </a>
+
+</div>
+
+<!-- PEMBESAR FOTO -->
+
+<div class="viewer" id="viewer" onclick="closePhoto()">
+
+    <span class="close">&times;</span>
+
+    <img id="largePhoto" src="" alt="Foto Galeri">
+
+</div>
+
+<script>
+
+function showPhoto(img) {
+    const viewer = document.getElementById("viewer");
+    const largePhoto = document.getElementById("largePhoto");
+
+    largePhoto.src = img.src;
+    viewer.style.display = "flex";
+}
+
+function closePhoto() {
+    document.getElementById("viewer").style.display = "none";
+    document.getElementById("largePhoto").src = "";
+}
+
+</script>
+
+</body>
 </html>
