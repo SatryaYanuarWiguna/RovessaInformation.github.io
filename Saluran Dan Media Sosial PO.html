@@ -1,14 +1,214 @@
-<!DOCTYPE html>
-<html>
 
+<!DOCTYPE html>
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Saluran dan Media Sosial PO Rovessa</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f4fa;
+    color: #202b40;
+    padding: 25px 15px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 25px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: #2860e8;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #8490a3;
+    font-size: 14px;
+}
+
+.section-title {
+    font-size: 18px;
+    margin: 25px 0 15px;
+    color: #263b62;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f1f4fa;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 16px;
+    border-left: 5px solid #2860e8;
+    gap: 12px;
+}
+
+.info h3 {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.info p {
+    font-size: 13px;
+    color: #8490a3;
+}
+
+.open-button {
+    background: #2860e8;
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.open-button:hover {
+    background: #1745b5;
+    transform: translateY(-2px);
+}
+
+.tiktok {
+    border-left-color: #111111;
+}
+
+.whatsapp {
+    border-left-color: #20bd69;
+}
+
+.back {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    padding: 13px 25px;
+    background: #eef2fa;
+    color: #2860e8;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.back:hover {
+    background: #2860e8;
+    color: white;
+}
+
+@media(max-width: 500px) {
+    .container {
+        padding: 22px 15px;
+    }
+
+    .social-card {
+        padding: 15px 12px;
+    }
+
+    .info h3 {
+        font-size: 14px;
+    }
+
+    .open-button {
+        padding: 11px 13px;
+        font-size: 12px;
+    }
+}
+</style>
 </head>
 
 <body>
-  
-</body>
 
+<div class="container">
+
+    <div class="header">
+        <h1>Saluran & Media Sosial</h1>
+        <p>Official Social Media PO Rovessa</p>
+    </div>
+
+    <h2 class="section-title">Social Media</h2>
+
+    <div class="social-card tiktok">
+        <div class="info">
+            <h3>TikTok Official</h3>
+            <p>Akun resmi PO Rovessa</p>
+        </div>
+
+        <a class="open-button"
+        href="https://www.tiktok.com/@akunresmi.erteceholiday?_r=1&_t=ZS-99k7alX4tKi"
+        target="_blank" rel="noopener noreferrer">
+        Buka Akun ↗
+        </a>
+    </div>
+
+    <h2 class="section-title">Tempat Nongkrong</h2>
+
+    <div class="social-card whatsapp">
+        <div class="info">
+            <h3>Warung Rovessa</h3>
+            <p>Grup WhatsApp</p>
+        </div>
+
+        <a class="open-button"
+        href="https://chat.whatsapp.com/KqFFcpPN7a4IXHwx8q155m"
+        target="_blank" rel="noopener noreferrer">
+        Gabung ↗
+        </a>
+    </div>
+
+    <h2 class="section-title">Saluran WhatsApp</h2>
+
+    <div class="social-card whatsapp">
+        <div class="info">
+            <h3>Saluran Java Adventure</h3>
+            <p>WhatsApp Channel</p>
+        </div>
+
+        <a class="open-button"
+        href="https://whatsapp.com/channel/0029VbDWEyk2ZjCjbjmkEu05"
+        target="_blank" rel="noopener noreferrer">
+        Lihat Saluran ↗
+        </a>
+    </div>
+
+    <div class="social-card whatsapp">
+        <div class="info">
+            <h3>Saluran WhatsApp Rovessa</h3>
+            <p>Saluran tambahan</p>
+        </div>
+
+        <a class="open-button"
+        href="https://whatsapp.com/channel/0029VbCYurcHAdNY947fSb1a"
+        target="_blank" rel="noopener noreferrer">
+        Lihat Saluran ↗
+        </a>
+    </div>
+
+    <a href="index.html" class="back">
+        ← Kembali ke Menu Utama
+    </a>
+
+</div>
+
+</body>
 </html>
