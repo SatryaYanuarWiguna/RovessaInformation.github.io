@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PO. Rovessa Trijaya</title>
+
+<style>
+
+/* =========================
+   PENGATURAN DASAR
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #04152e, #075985, #0284c7);
+    color: white;
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 750px;
+    width: 100%;
+    margin: auto;
+}
+
+/* =========================
+   PROFIL PERUSAHAAN
+========================= */
+
+.profile {
+    padding: 35px 20px;
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 22px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.profile-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #7dd3fc;
+    margin: 0 auto 20px;
+    box-shadow: 0 0 20px rgba(14,165,233,0.7);
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile h1 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.username {
+    color: #7dd3fc;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.bio {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #e0f2fe;
+}
+
+.line {
+    width: 65px;
+    height: 3px;
+    background: #38bdf8;
+    margin: 22px auto;
+    border-radius: 10px;
+}
+
+/* =========================
+   INFORMASI PERUSAHAAN
+========================= */
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.info-item {
+    background: rgba(255,255,255,0.10);
+    padding: 17px 10px;
+    border-radius: 13px;
+}
+
+.info-item h3 {
+    color: #7dd3fc;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.info-item p {
+    font-size: 14px;
+}
+
+/* =========================
+   SEJARAH PERUSAHAAN
+========================= */
+
+.history {
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 22px;
+    padding: 30px 22px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.history h2 {
+    color: #7dd3fc;
+    font-size: 21px;
+    margin-bottom: 25px;
+}
+
+.history p {
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #7dd3fc;
+    font-weight: bold;
+}
+
+/* =========================
+   MENU PILIHAN
+========================= */
+
+.menu-section {
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 22px;
+    padding: 30px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.menu-title {
+    font-size: 23px;
+    color: #7dd3fc;
+    margin-bottom: 8px;
+}
+
+.menu-description {
+    color: #bae6fd;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+/* SUSUNAN TOMBOL */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+}
+
+/* TOMBOL MENU */
+
+.menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 105px;
+    padding: 15px 8px;
+
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 17px;
+
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+/* IKON MENU */
+
+.menu-icon {
+    font-size: 27px;
+}
+
+/* EFEK KLIK */
+
+.menu-button:hover {
+    background: #2563eb;
+    border-color: #7dd3fc;
+    transform: translateY(-4px);
+    box-shadow: 0 7px 20px rgba(0,0,0,0.2);
+}
+
+.menu-button:active {
+    transform: scale(0.96);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    border-top: 1px solid rgba(255,255,255,0.25);
+    margin-top: 25px;
+    padding-top: 20px;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #bae6fd;
+    text-align: center;
+}
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media(max-width: 400px) {
+
+    .profile h1 {
+        font-size: 21px;
+    }
+
+    .history p {
+        font-size: 14px;
+    }
+
+    .menu-button {
+        font-size: 12px;
+        min-height: 95px;
+    }
+
+    .menu-icon {
+        font-size: 24px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- =====================
+         PROFIL PERUSAHAAN
+    ====================== -->
+
+    <section class="profile">
+
+        <div class="profile-photo">
+            <img src="Foto PO.jpg" alt="Logo Rovessa">
+        </div>
+
+        <h1>PO. ROVESSA TRIJAYA COMPANY</h1>
+
+        <div class="username">
+            @rovessatrijaya
+        </div>
+
+        <div class="bio">
+            Official Profile<br>
+            Rovessa Trijaya Company (RTC)<br>
+            Established 02 December 2025
+        </div>
+
+        <div class="line"></div>
+
+        <div class="info">
+
+            <div class="info-item">
+                <h3>BERDIRI SEJAK</h3>
+                <p>02 Desember 2025</p>
+            </div>
+
+            <div class="info-item">
+                <h3>IDENTITAS</h3>
+                <p>RTC</p>
+            </div>
+
+            <div class="info-item">
+                <h3>JENIS USAHA</h3>
+                <p>Perusahaan Otobus</p>
+            </div>
+
+            <div class="info-item">
+                <h3>NAMA PERUSAHAAN</h3>
+                <p>Rovessa Trijaya Company</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================
+         SEJARAH PERUSAHAAN
+    ====================== -->
+
+    <section class="history">
+
+        <h2>SEJARAH PERUSAHAAN</h2>
+
+        <div class="line"></div>
+
+        <p>
+            PO. Rovessa Trijaya Company berdiri pada tanggal
+            <span class="highlight">2 Desember 2025</span>.
+            Pada awal berdirinya, PO ini bernama
+            <span class="highlight">MRH Holiday</span>,
+            kemudian mengalami perubahan nama menjadi
+            <span class="highlight">Rovessa Holiday</span>.
+        </p>
+
+        <p>
+            Seiring berjalannya waktu, perusahaan ini menggunakan nama
+            <span class="highlight">PO. Rovessa Transport Corporation (RTC)</span>.
+            Kemudian, nama tersebut kembali mengalami perubahan menjadi
+            <span class="highlight">Rovessa Trijaya Company</span>,
+            dengan mengganti kata Transport Corporation menjadi Trijaya Company.
+        </p>
+
+        <p>
+            Meskipun telah mengalami beberapa kali perubahan nama,
+            kata <span class="highlight">"Rovessa"</span>
+            tetap dipertahankan dan digunakan hingga saat ini
+            sebagai identitas utama perusahaan.
+        </p>
+
+        <div class="footer">
+
+            Sekian sejarah singkat dari PO. Rovessa Trijaya Company.
+
+            <br>
+
+            Terima kasih telah berkunjung.
+
+            <br><br>
+
+            © 2026 Rovessa Trijaya Company
+
+            <br>
+
+            All Rights Reserved.
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================
+         MENU PILIHAN
+    ====================== -->
+
+    <section class="menu-section">
+
+        <h2 class="menu-title">MENU UTAMA</h2>
+
+        <p class="menu-description">
+            Jelajahi informasi dan layanan PO Rovessa
+        </p>
+
+        <div class="menu-grid">
+
+            <a href="Asset PO.html" class="menu-button">
+                <span class="menu-icon">🚌</span>
+                Asset PO
+            </a>
+
+            <a href="Customer Service.html" class="menu-button">
+                <span class="menu-icon">💬</span>
+                Customer Service
+            </a>
+
+            <a href="Galeri PO.html" class="menu-button">
+                <span class="menu-icon">🖼️</span>
+                Galeri PO
+            </a>
+
+            <a href="Informasi Penting.html" class="menu-button">
+                <span class="menu-icon">📢</span>
+                Informasi Penting
+            </a>
+
+            <a href="Peraturan PO.html" class="menu-button">
+                <span class="menu-icon">📋</span>
+                Peraturan PO
+            </a>
+
+            <a href="Saluran Dan Media Sosial PO.html" class="menu-button">
+                <span class="menu-icon">🌐</span>
+                Saluran & Media Sosial PO
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================
+         FOOTER AKHIR
+    ====================== -->
+
+    <div class="footer">
+        <b>PO. ROVESSA TRIJAYA</b>
+        <br>
+        Rovessa Trijaya Company (RTC)
+        <br>
+        © 2026 All Rights Reserved.
+    </div>
+
+</div>
+
+</body>
+</html>
